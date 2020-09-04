@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .form-login {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            background: #b49d9d;
+        }
+        
+        form {
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        img.avatar-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #03A9F4;
+            margin-top: -50px;
+        }
+        
+        h1.login-title {
+            text-align: center;
+        }
+        
+        .input-group {
+            text-align: start;
+            margin: auto;
+            width: 80%;
+            margin-top: 30px;
+        }
+        
+        span.lable {
+            display: block;
+            font-size: 1.2rem;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #1ba7e8;
+            outline: none;
+        }
+        
+        .input-group input:focus~.lable {
+            color: red;
+        }
+        
+        .input-group input:focus {
+            background-color: rgb(234, 237, 238);
+            border: 1px solid #4ac6ff;
+        }
+        
+        a.btn {
+            width: 80%;
+            background: #00BCD4;
+            color: #fff;
+            text-decoration: none;
+            margin: 15px auto;
+            display: block;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-login">
+        <form action="">
+            <img src="/img/about-img.jpg" alt="" class="avatar-img">
+            <h1 class="login-title">Đăng nhập</h1>
+            <div class="input-group">
+                <span class="lable">User name</span>
+                <input type="text" placeholder="Type username....">
+
+            </div>
+            <div class="input-group">
+                <span class="lable">Passwords</span>
+                <input type="password" placeholder="Type Passwords....">
+            </div>
+            <a href="#" class="btn">Log in</a>
+        </form>
+    </div>
+
+</body>
+
+</html>
