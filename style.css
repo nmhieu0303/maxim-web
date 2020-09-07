@@ -26,6 +26,14 @@ li {
     list-style: none;
 }
 
+section {
+    padding: 4.9rem 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
 
 /* ================ BOSTRAP ========== */
 
@@ -106,7 +114,7 @@ li {
 
 #header {
     position: fixed;
-    z-index: 2;
+    z-index: 999999;
     top: 0;
     left: 0;
     width: 100%;
@@ -300,10 +308,6 @@ h1.hero--headline {
     border-color: var(--primary-color);
 }
 
-.about {
-    padding: 4.9rem 0;
-}
-
 .about img {
     width: 100%;
 }
@@ -393,10 +397,6 @@ h4.about__desc--subtitle {
 
 /* ========================== SECTION FEATURES ========================  */
 
-section.features {
-    padding: 4.8rem 0;
-}
-
 .features .nav__item:not(:first-child) {
     margin-top: 0.5rem;
 }
@@ -431,10 +431,6 @@ section.features {
 
 
 /* ======================== SECTION SERVICES    ======================== */
-
-.services {
-    padding: 4.8rem 0;
-}
 
 .section--title {
     text-align: center;
@@ -481,4 +477,259 @@ section.features {
     font-size: 1.1rem;
     color: var(--secondary-text-color);
     line-height: 2.2rem;
+}
+
+
+/* ======================== SECTION TESTIMONIALS ======================*/
+
+.testimonial__slider {
+    display: flex;
+}
+
+.testimonial__item--content {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: center;
+    margin: 0 1rem;
+    padding: 1.6rem 1.6rem 4.6rem 1.6rem;
+    background-color: #eff7f6;
+}
+
+.testimonial__item .testimonial__item--content .quote-icon {
+    display: inline-block;
+    position: relative;
+    color: #a8d3cc;
+}
+
+.testimonial__item .testimonial__item--content .quote-icon-left {
+    left: -0.5rem;
+}
+
+.testimonial__item .testimonial__item--content .quote-icon-right {
+    right: -0.5rem;
+    top: 0.5rem;
+}
+
+img.testimonial__item--img {
+    width: 7rem;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin: -3.1rem 0 0px 3.1rem;
+}
+
+.testimonial__item--name {
+    margin: 0.8rem 0 0.5rem 3.5rem;
+    font-size: 1.4rem;
+}
+
+h4.testimonial__item--country {
+    margin-left: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: var(--secondary-text-color);
+}
+
+
+/* ====================== SECTION PORTFOLIO ==================== */
+
+.portfolio__filters {
+    display: flex;
+    margin: 0 auto 2.8rem auto;
+    padding: 0.6rem 1.6rem;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio__filters li {
+    cursor: pointer;
+    padding: 10px 15px 8px 15px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio__filters .portfolio__filter--active,
+.portfolio__filters li:hover {
+    color: var(--primary-color);
+}
+
+.portfolio__item--wrap {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 2.3rem;
+}
+
+.portfolio__item--wrap::before {
+    content: "";
+    position: absolute;
+    top: 2.3rem;
+    right: 2.3rem;
+    bottom: 2.3rem;
+    left: 2.3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio__item--wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 5px #fff solid;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio__item--info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio__item--img {
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio__item--info .item__info--title {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio__item--info .item__info--filter {
+    color: rgb(212, 212, 212);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0px;
+    margin: 0px;
+}
+
+.portfolio__item--info .item__info--link {
+    margin-top: 0.8rem;
+}
+
+.portfolio__item--info .item__info--link a {
+    font-size: 2.1rem;
+    margin: 0 0.2rem;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio__item--info .item__info--link a:hover {
+    color: var(--primary-color);
+}
+
+.portfolio__item--wrap:hover:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.portfolio__item--wrap:hover::after {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.portfolio__item--wrap:hover .portfolio__item--img {
+    transform: scale(1.3);
+}
+
+.portfolio__item--wrap:hover::after,
+.portfolio__item--wrap:hover::before,
+.portfolio__item--wrap:hover .portfolio__item--info {
+    opacity: 1;
+}
+
+
+/* ================ SECTION TEAM ===================*/
+
+.team__member {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team__member--img {
+    width: 100%;
+}
+
+.team__member--info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+}
+
+.team .member__info--social {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -3.9rem;
+    width: 3.9rem;
+    font-size: 1.7rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.team .member__info--social a {
+    display: block;
+    color: var(--white-color);
+    margin-top: 1.1rem;
+    transition: 0.4s
+}
+
+.team .member__info--content {
+    opacity: 0;
+    position: absolute;
+    left: 3.9rem;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.team .info__content--name {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.team .member__info--social a:hover {
+    color: var(--primary-color);
+}
+
+.team__member:hover .member__info--social {
+    left: 0;
+    opacity: 1;
+}
+
+.team__member:hover .member__info--content {
+    opacity: 1;
+    transform: translateY(-80%);
 }
